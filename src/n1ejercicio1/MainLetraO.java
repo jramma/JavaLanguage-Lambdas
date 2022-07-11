@@ -8,7 +8,7 @@ public class MainLetraO {
 		ArrayList<String> palabras = new ArrayList<String>();
 		addPalabras(palabras);
 		 palabras.stream().filter(n -> n.contains("o"))
-											.forEach(n->System.out.println(n));
+				  .forEach(n->System.out.println(n));
 		
 	}
 
