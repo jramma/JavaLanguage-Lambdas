@@ -1,18 +1,19 @@
-package n1ejercicio1;
+package n1ejercicio2;
 
 import java.util.ArrayList;
 
-public class MainLetraO {
-
+public class MainO5Letras {
 	public static void main(String[] args) {
+
 		ArrayList<String> palabras = new ArrayList<String>();
 		addPalabras(palabras);
 		System.out.println(palabras);
-		System.out.println("-----------------------------");
-		
+		System.out.println("----------------------------------------------");
+
 		palabras.stream().filter(n -> n.contains("o"))
-				  .forEach(n->System.out.println(n));
-		
+						 .filter(n-> n.length()>5)
+						 .forEach(n -> System.out.println(n));
+
 	}
 
 	private static void addPalabras(ArrayList<String> palabras) {
@@ -24,5 +25,4 @@ public class MainLetraO {
 		palabras.add("ventana");
 
 	}
-
 }
