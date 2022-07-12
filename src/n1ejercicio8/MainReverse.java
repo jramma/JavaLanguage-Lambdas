@@ -7,9 +7,7 @@ public class MainReverse {
 	public static void main(String[] args) {
 
 		InterfaceReverse output = (input) -> {
-			input = input.chars().mapToObj(e -> String.valueOf((char) e)).reduce((a, e) -> e.concat(a)).toString();
-			return input;
-
+			return new StringBuilder(input).reverse().toString();
 		};
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce un String:");
